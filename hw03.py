@@ -152,12 +152,11 @@ def mc2(tries, f, t1, t2):
     while i < tries:
         x = random.uniform(t1, t2)
         y = random.uniform(f(t1), f(t2))
-        # If the point is inside circle, increase variable
+        # If the point is under curve, increase counter
         if y < f(x):
             under_curve += 1
         i += 1
 
-    # Calculate area and print; should be closer to Pi with increasing number of throws
     area = abs((t2 - t1) * (y2 - y1))
     area_under_curve = area * (under_curve / tries)
 
@@ -237,6 +236,7 @@ def problem_2():
 
 
 def problem_5():
+    conditions()
     print("With current odds:")
     vote(1e6)
     print("With D +2:")
@@ -248,8 +248,8 @@ def problem_5():
 
 
 def main():
-    problem_1()
-    problem_2()
+    #problem_1()
+    #problem_2()
     problem_5()
 
 
