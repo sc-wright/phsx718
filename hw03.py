@@ -226,7 +226,7 @@ def vote(n, offset=0, new_odds=None):
             state_vote = random.normal(odd+offset, std)
             # Multiply the electoral votes by +1 or -1 depending on who won
             # This could be skipped and added to the balance right away,
-            # this step simply retains the individual state results in case we want to look at them later.
+            # this step simply retains the individual state results in case we want to look at them later
             vote_outcomes[i] += int(np.sign(state_vote) * elec)
 
     d_win = 0
